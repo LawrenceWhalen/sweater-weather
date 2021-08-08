@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://www.mapquestapi.com/geocoding/v1/address?key=<Geo_Key>&location=Washington,DC&maxResults=1&outFormat=json&thumbMaps=false
+    uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=Washington,DC&outFormat=json&thumbMaps=false
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sun, 08 Aug 2021 21:28:46 GMT
+      - Sun, 08 Aug 2021 22:50:17 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '842'
+      - '843'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Sun, 08 Aug 2021 21:28:46 GMT
+      - Sun, 08 Aug 2021 22:50:17 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=723D8DF4B8B2447A3082047960AE90D5; Path=/; HttpOnly
+      - JSESSIONID=BC80CBB664C7855EDD36BCDFFBFC6A38; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
-        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Washington,DC"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Washington","adminArea5Type":"City","adminArea4":"District
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Washington,DC"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Washington","adminArea5Type":"City","adminArea4":"District
         of Columbia","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282772166","unknownInput":"","type":"s","latLng":{"lat":38.892062,"lng":-77.019912},"displayLatLng":{"lat":38.892062,"lng":-77.019912}}]}]}'
-  recorded_at: Sun, 08 Aug 2021 21:28:45 GMT
+  recorded_at: Sun, 08 Aug 2021 22:50:17 GMT
 recorded_with: VCR 6.0.0
