@@ -17,7 +17,7 @@ class WeatherService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.conn(auth_token = nil)
+  def self.conn
     Faraday.new(url: 'https://api.openweathermap.org') do |faraday|
       faraday.params[:appid] = ENV['WEATHER_API']
     end
