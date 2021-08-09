@@ -7,8 +7,14 @@ class GeoService
       conn.params[:addressmaxResults] = 1
       conn.params[:outFormat] = 'json'
     end
+    
+    response_hash = parse_json(response)
 
-    parse_json(response)
+    if response_hash[:results][0][:locations][0][:adminArea1] == 'US'
+      response_hash
+    else
+      { error: 'city not found' }
+    end
   end
 
   private
