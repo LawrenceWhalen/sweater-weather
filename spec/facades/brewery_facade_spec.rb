@@ -7,7 +7,7 @@ RSpec.describe BreweryFacade do
         VCR.use_cassette 'brewery facade 1' do
           actual = BreweryFacade.by_city('denver,co', 10)
 
-          expext(actual.id).to eq(nil)
+          expect(actual.id).to eq(nil)
           expect(actual.destination).to eq('denver,co')
           expect(actual.forecast[:summary].class).to eq(String)
           expect(actual.forecast[:temperature].class).to eq(String)
