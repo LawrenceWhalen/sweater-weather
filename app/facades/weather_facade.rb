@@ -15,6 +15,16 @@ class WeatherFacade
     })
   end
 
+  def self.current_brew(location)
+    location_hash = GeoFacade.lat_lng(location)
+    raw_data = WeatherService.brew_weather(location_hash)
+
+    { 
+      summary: raw_data[:weather][0][:description], 
+      temperature: "#{raw_data[:main][:temp]} F"
+    }
+  end
+
   private
 
   def self.current_hash(attributes)
