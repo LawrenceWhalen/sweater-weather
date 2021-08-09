@@ -22,4 +22,11 @@ class ApplicationController < ActionController::API
     nil
   end
 
+  def quantity_check(quantity)
+    if quantity.to_i <=0
+      5
+    else
+      quantity
+    end
+  end
 end

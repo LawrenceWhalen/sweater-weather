@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:31 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:31 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=E013D56B43EFD6D723159F8B8F59BD97; Path=/; HttpOnly
+      - JSESSIONID=A441F0D03FBD3E7B1B3FDD7C8EEAE202; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -53,10 +53,10 @@ http_interactions:
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}}]}]}'
-  recorded_at: Mon, 09 Aug 2021 17:34:14 GMT
+  recorded_at: Mon, 09 Aug 2021 17:29:31 GMT
 - request:
     method: get
-    uri: https://api.openbrewerydb.org/breweries?by_dist=39.738453,-104.984853&per_page=8
+    uri: https://api.openbrewerydb.org/breweries?by_dist=39.738453,-104.984853&per_page=5
     body:
       encoding: US-ASCII
       string: ''
@@ -77,17 +77,17 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - max-age=86400, public
       Etag:
-      - W/"35f1d42dd56c62e2a03981e1a10f5248"
+      - W/"aa1b41d0103c1f46f3cbe8f4946dcbc5"
       X-Request-Id:
-      - e70b4d03-e105-4fd6-af6a-811cf1b3b1ea
+      - 39ec67a0-e562-46ab-be43-fe4d47409c91
       X-Runtime:
-      - '0.030489'
+      - '0.034832'
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       Vary:
@@ -98,25 +98,18 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '[{"id":8245,"obdb_id":"aero-craft-brewing-denver","name":"Aero Craft
-        Brewing","brewery_type":"planning","street":null,"address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80212-2199","country":"United
-        States","longitude":"-104.984696","latitude":"39.7391428","phone":"3039185446","website_url":"http://www.aerocraft.beer","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":8962,"obdb_id":"black-beak-brewing-denver","name":"Black
-        Beak Brewing","brewery_type":"planning","street":null,"address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80237-1907","country":"United
-        States","longitude":"-104.984696","latitude":"39.7391428","phone":"3032107836","website_url":null,"updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":13467,"obdb_id":"pints-pub-brewery-and-freehouse-denver","name":"Pints
+      string: '[{"id":8962,"obdb_id":"black-beak-brewing-denver","name":"Black Beak
+        Brewing","brewery_type":"planning","street":null,"address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80237-1907","country":"United
+        States","longitude":"-104.984696","latitude":"39.7391428","phone":"3032107836","website_url":null,"updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":8245,"obdb_id":"aero-craft-brewing-denver","name":"Aero
+        Craft Brewing","brewery_type":"planning","street":null,"address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80212-2199","country":"United
+        States","longitude":"-104.984696","latitude":"39.7391428","phone":"3039185446","website_url":"http://www.aerocraft.beer","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":13467,"obdb_id":"pints-pub-brewery-and-freehouse-denver","name":"Pints
         Pub Brewery and Freehouse","brewery_type":"brewpub","street":"221 W 13th Ave","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80204-2711","country":"United
         States","longitude":"-104.9908538","latitude":"39.737018","phone":"3035347543","website_url":"http://www.pintspub.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":11093,"obdb_id":"grandma-s-house-denver","name":"Grandma''s
         House","brewery_type":"micro","street":"1710 S Broadway","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80210-3102","country":"United
         States","longitude":"-104.9872737","latitude":"39.74350567","phone":"3035786754","website_url":"http://www.grandmasbeer.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":8598,"obdb_id":"banded-oak-brewing-company-denver","name":"Banded
         Oak Brewing Company","brewery_type":"brewpub","street":"470 N Broadway","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80203-3404","country":"United
-        States","longitude":"-104.9874187","latitude":"39.7282897","phone":"7204798033","website_url":"http://Bandedoakbrewing.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":15810,"obdb_id":"woods-boss-brewing-company-denver","name":"Woods
-        Boss Brewing Company","brewery_type":"micro","street":"2210 California St","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80205-2824","country":"United
-        States","longitude":"-104.9845374","latitude":"39.7509153","phone":"9149609225","website_url":"http://www.woodsbossbrew.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":15077,"obdb_id":"thirsty-monk-pub-brewery-denver","name":"Thirsty
-        Monk Pub Brewery","brewery_type":"micro","street":"1604 E 17th Ave","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80218-1621","country":"United
-        States","longitude":"-104.9682508","latitude":"39.743154","phone":null,"website_url":null,"updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"},{"id":14968,"obdb_id":"the-intrepid-sojourner-beer-project-denver","name":"The
-        Intrepid Sojourner Beer Project","brewery_type":"micro","street":"925 W 8th
-        Ave","address_2":null,"address_3":null,"city":"Denver","state":"Colorado","county_province":null,"postal_code":"80204-4333","country":"United
-        States","longitude":"-104.9993865","latitude":"39.7291386","phone":"8122498792","website_url":"http://sojournerbeers.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"}]'
-  recorded_at: Mon, 09 Aug 2021 17:34:14 GMT
+        States","longitude":"-104.9874187","latitude":"39.7282897","phone":"7204798033","website_url":"http://Bandedoakbrewing.com","updated_at":"2018-08-24T00:00:00.000Z","created_at":"2018-07-24T00:00:00.000Z"}]'
+  recorded_at: Mon, 09 Aug 2021 17:29:32 GMT
 - request:
     method: get
     uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=denver,co&outFormat=json&thumbMaps=false
@@ -136,7 +129,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:32 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -152,13 +145,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:32 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=DAF3208E46D5F41E2A713A30C8399411; Path=/; HttpOnly
+      - JSESSIONID=B75247CE079ACDF3019C5560764A48F1; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -170,7 +163,7 @@ http_interactions:
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}}]}]}'
-  recorded_at: Mon, 09 Aug 2021 17:34:14 GMT
+  recorded_at: Mon, 09 Aug 2021 17:29:32 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/weather?appid=<Weather_Key>&lat=39.738453&lon=-104.984853&units=imperial
@@ -192,7 +185,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 09 Aug 2021 17:34:14 GMT
+      - Mon, 09 Aug 2021 17:29:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -210,6 +203,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"coord":{"lon":-104.9849,"lat":39.7385},"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"01d"}],"base":"stations","main":{"temp":90.01,"feels_like":86.45,"temp_min":83.97,"temp_max":94.75,"pressure":1007,"humidity":21},"visibility":10000,"wind":{"speed":1.01,"deg":141,"gust":5.01},"clouds":{"all":0},"dt":1628530160,"sys":{"type":2,"id":2004334,"country":"US","sunrise":1628510803,"sunset":1628561050},"timezone":-21600,"id":5419384,"name":"Denver","cod":200}'
-  recorded_at: Mon, 09 Aug 2021 17:34:14 GMT
+        sky","icon":"01d"}],"base":"stations","main":{"temp":90.01,"feels_like":86.45,"temp_min":83.97,"temp_max":94.75,"pressure":1007,"humidity":21},"visibility":10000,"wind":{"speed":1.01,"deg":141,"gust":5.01},"clouds":{"all":0},"dt":1628530172,"sys":{"type":2,"id":2004334,"country":"US","sunrise":1628510803,"sunset":1628561050},"timezone":-21600,"id":5419384,"name":"Denver","cod":200}'
+  recorded_at: Mon, 09 Aug 2021 17:29:32 GMT
 recorded_with: VCR 6.0.0
