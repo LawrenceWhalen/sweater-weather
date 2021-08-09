@@ -1,9 +1,16 @@
 class Api::V1::BreweriesController < ApplicationController
 
   def index
-    brewery_data = BreweryFacade.by_city(params[:location], params[:quantity])
+    check_result = location_check(params[:location])
 
-    render json: BrewerySerializer.new(brewery_data)
+    if check_result
+      json = check_result
+    else
+      brewery_data = BreweryFacade.by_city(params[:location], params[:quantity])
+      json = BrewerySerializer.new(brewery_data)
+    end
+
+    render json: json
   end
   
 end

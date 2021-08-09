@@ -22,5 +22,40 @@ RSpec.describe 'brewery requests' do
         expect(attributes[:breweries][0].keys).to eq([:id, :name, :brewery_type])
       end
     end
+    describe 'incorrect querries' do
+      describe 'incorrect formatting' do
+        it 'returns an incorrect format error' do
+          VCR.use_cassette 'brewery request 2' do
+            get api_v1_breweries_path(location: 'denverco', quantity: 8)
+
+            actual = JSON.parse(response.body, symbolize_names: true)
+
+            expect(actual[:errors][0][:location]).to eq("invalid location format")
+          end
+        end
+      end
+      describe 'incorrect state' do
+        it 'returns an incorrect state error' do
+          VCR.use_cassette 'brewery request 3' do
+            get api_v1_breweries_path(location: 'denver,xo', quantity: 8)
+
+            actual = JSON.parse(response.body, symbolize_names: true)
+
+            expect(actual[:errors][0][:location]).to eq("invalid state code")
+          end
+        end
+      end
+      describe 'no city provided' do
+        it 'returns an incorrect state error' do
+          VCR.use_cassette 'brewery request 4' do
+            get api_v1_breweries_path(location: ',co', quantity: 8)
+
+            actual = JSON.parse(response.body, symbolize_names: true)
+
+            expect(actual[:errors][0][:location]).to eq("must include city")
+          end
+        end
+      end
+    end
   end
 end
