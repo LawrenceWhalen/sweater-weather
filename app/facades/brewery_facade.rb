@@ -2,6 +2,9 @@ class BreweryFacade
 
   def self.by_city(destination, quantity)
     location = GeoFacade.lat_lng(destination)
+    if location[:error]
+      return location
+    end
     breweries = AaService.by_location(location, quantity)
     weather = WeatherFacade.current_brew(destination)
 

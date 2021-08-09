@@ -2,6 +2,9 @@ class WeatherFacade
 
   def self.weather_return(location)
     location_hash = GeoFacade.lat_lng(location)
+    if location_hash[:error]
+      return location_hash
+    end
     raw_data = WeatherService.one_weather(location_hash)
 
     current = current_hash(raw_data[:current])
