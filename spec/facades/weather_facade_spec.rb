@@ -40,7 +40,15 @@ RSpec.describe WeatherFacade do
       end
     end
     describe '.current_brew' do
-      
+      it 'returns the summary and temp for a location' do
+        VCR.use_cassette 'weather facade 2' do
+          actual = WeatherFacade.current_brew('Denver,CO')
+
+          expect(actual.class).to eq(Hash)
+          expect(actual[:summary].class).to eq(String)
+          expect(actual[:temperature].class).to eq(String)
+        end
+      end
     end
   end
 end

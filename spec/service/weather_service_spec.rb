@@ -19,6 +19,7 @@ RSpec.describe WeatherService do
         end
       end
     end
+
     describe '.brew_weather' do
       it 'returns the current weather for a location' do
         VCR.use_cassette 'weather service 2' do
