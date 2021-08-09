@@ -39,5 +39,8 @@ RSpec.describe WeatherFacade do
         end
       end
     end
+    describe '.current_brew' do
+      
+    end
   end
 end
