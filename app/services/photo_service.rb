@@ -1,8 +1,17 @@
-class AaService
-  def self..photo_by_coord(location_hash)
-    response = conn.get("/services/rest/") do |conn|
-      conn.params[:by_dist] = "#{location[:lat]},#{location[:lng]}"
-      conn.params[:per_page] = quantity
+class PhotoService
+  def self.photo_by_coord(location, city_name)
+    response = conn.get("/services/rest/?method=flickr.photos.search") do |conn|
+      conn.params[:sort] = 'relevance'
+      conn.params[:privacy_filter] = 1
+      conn.params[:accuracy] = 11
+      conn.params[:content_type] = 1
+      conn.params[:media] = 'photos'
+      conn.params[:sort] = 'relevance'
+      conn.params[:lat] = location[:lat].to_i
+      conn.params[:lon] = location[:lon].to_i
+      conn.params[:per_page] = 1
+      conn.params[:format] = 'json'
+      conn.params[:nojsoncallback] = 1
     end
 
     parse_json(response)
@@ -20,5 +29,3 @@ class AaService
     end
   end
 end
-
-?method=flickr.photos.search&api_key=&text=Texarkana&sort=relevance&privacy_filter=1&accuracy=11&safe_search=1&content_type=1&media=photos&has_geo=1&geo_context=2&lat=33.44&lon=-94.04&per_page=1&format=json&nojsoncallback=1
