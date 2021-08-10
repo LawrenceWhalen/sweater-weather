@@ -1,5 +1,5 @@
 class PhotoService
-  def self.photo_by_coord(location, city_name)
+  def self.photo_by_coord(location)
     response = conn.get("/services/rest/?method=flickr.photos.search") do |conn|
       conn.params[:sort] = 'relevance'
       conn.params[:privacy_filter] = 1
@@ -10,6 +10,16 @@ class PhotoService
       conn.params[:lat] = location[:lat].to_i
       conn.params[:lon] = location[:lon].to_i
       conn.params[:per_page] = 1
+      conn.params[:format] = 'json'
+      conn.params[:nojsoncallback] = 1
+    end
+
+    parse_json(response)
+  end
+
+  def self.artist_account(user_id)
+    response = conn.get("/services/rest/?method=flickr.profile.getProfile") do |conn|
+      conn.params[:user_id] = user_id
       conn.params[:format] = 'json'
       conn.params[:nojsoncallback] = 1
     end
