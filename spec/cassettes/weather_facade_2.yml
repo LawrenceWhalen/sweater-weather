@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Tue, 10 Aug 2021 20:37:28 GMT
+      - Mon, 09 Aug 2021 16:05:13 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -35,13 +35,13 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 10 Aug 2021 20:37:28 GMT
+      - Mon, 09 Aug 2021 16:05:13 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
       - '0'
       Set-Cookie:
-      - JSESSIONID=4F19D5CEBAB0ADB7217BDC190728615A; Path=/; HttpOnly
+      - JSESSIONID=B458F17F1CBCF64A06E67CF285F89575; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -53,5 +53,46 @@ http_interactions:
         2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Denver,CO"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
         County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}}]}]}'
-  recorded_at: Tue, 10 Aug 2021 20:37:28 GMT
+  recorded_at: Mon, 09 Aug 2021 16:05:13 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<Weather_Key>&lat=39.738453&lon=-104.984853&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 09 Aug 2021 16:05:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '481'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=39.74&lon=-104.98&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-104.984,"lat":39.7427},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":84.97,"feels_like":82.62,"temp_min":77.67,"temp_max":91.35,"pressure":1009,"humidity":28},"visibility":10000,"wind":{"speed":1.01,"deg":120,"gust":1.99},"clouds":{"all":0},"dt":1628524801,"sys":{"type":2,"id":2002746,"country":"US","sunrise":1628510803,"sunset":1628561050},"timezone":-21600,"id":5419384,"name":"Denver","cod":200}'
+  recorded_at: Mon, 09 Aug 2021 16:05:13 GMT
 recorded_with: VCR 6.0.0

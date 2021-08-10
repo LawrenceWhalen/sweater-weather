@@ -2,6 +2,9 @@ class WeatherFacade
 
   def self.weather_return(location)
     location_hash = GeoFacade.lat_lng(location)
+    if location_hash[:error]
+      return location_hash
+    end
     raw_data = WeatherService.one_weather(location_hash)
 
     current = current_hash(raw_data[:current])
@@ -13,6 +16,16 @@ class WeatherFacade
       daily_weather: daily,
       hourly_weather: hourly
     })
+  end
+
+  def self.current_brew(location)
+    location_hash = GeoFacade.lat_lng(location)
+    raw_data = WeatherService.brew_weather(location_hash)
+
+    { 
+      summary: raw_data[:weather][0][:description], 
+      temperature: "#{raw_data[:main][:temp]} F"
+    }
   end
 
   private

@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openbrewerydb.org/breweries?by_dist=38.8977,77.0365&per_page=5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 09 Aug 2021 15:21:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - max-age=86400, public
+      Etag:
+      - W/"4285dfb5945387507005ed4be360756f"
+      X-Request-Id:
+      - 04c4ec05-facd-4a0b-bcfd-760c24b842bd
+      X-Runtime:
+      - '0.039415'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Origin
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '[{"id":20506,"obdb_id":"mescan-brewery-kilsallagh","name":"Mescan Brewery","brewery_type":"micro","street":"Cartoor","address_2":null,"address_3":null,"city":"Kilsallagh","state":null,"county_province":"Mayo","postal_code":"F28
+        FW70","country":"Ireland","longitude":"9.73047","latitude":"53.7471934","phone":"3.53868E+11","website_url":"https://www.mescanbrewery.com/","updated_at":"2021-03-26T00:00:00.000Z","created_at":"2021-03-26T00:00:00.000Z"},{"id":11828,"obdb_id":"jaw-brew-milngavie","name":"Jaw
+        Brew","brewery_type":"micro","street":"26 Crossveggate","address_2":null,"address_3":null,"city":"Milngavie","state":null,"county_province":"East
+        Dunbartonshire","postal_code":"G62 6RA","country":"Scotland","longitude":"55.9408943","latitude":"-4.3131808","phone":"7880690995","website_url":"https://www.jawbrew.co.uk/","updated_at":"2020-10-15T00:00:00.000Z","created_at":"2020-10-15T00:00:00.000Z"},{"id":12100,"obdb_id":"late-night-hype-brewing-co-clydebank","name":"Late
+        Night Hype Brewing Co","brewery_type":"micro","street":"Unit 17","address_2":"Andrew
+        Court","address_3":"South Douglas Streeet","city":"Clydebank","state":null,"county_province":"West
+        Dunbartonshire","postal_code":"G81 1PD","country":"Scotland","longitude":"55.8959515","latitude":"-4.4023283","phone":"1412611278","website_url":"http://www.latenighthypebrewing.com/","updated_at":"2020-10-15T00:00:00.000Z","created_at":"2020-10-15T00:00:00.000Z"},{"id":12256,"obdb_id":"loch-lomond-brewery-dumbarton","name":"Loch
+        Lomond Brewery","brewery_type":"micro","street":"Block 2 Unit 11","address_2":"Vale
+        of Leven Industrial Estate","address_3":null,"city":"Dumbarton","state":null,"county_province":"West
+        Dunbartonshire","postal_code":"G82 3PD","country":"Scotland","longitude":"55.969774","latitude":"-4.576255","phone":"1389755698","website_url":"https://www.lochlomondbrewery.com/","updated_at":"2020-10-15T00:00:00.000Z","created_at":"2020-10-15T00:00:00.000Z"},{"id":12160,"obdb_id":"lennox-brewery-dumbarton","name":"Lennox
+        Brewery","brewery_type":"micro","street":"25 Lime Road","address_2":"Broadmeadow
+        Industrial Estate","address_3":null,"city":"Dumbarton","state":null,"county_province":"West
+        Dunbartonshire","postal_code":"G82 2RP","country":"Scotland","longitude":"55.9478947","latitude":"-4.5708885","phone":"1389298642","website_url":"https://www.lennoxbrewery.com/","updated_at":"2020-10-15T00:00:00.000Z","created_at":"2020-10-15T00:00:00.000Z"}]'
+  recorded_at: Mon, 09 Aug 2021 15:21:41 GMT
+recorded_with: VCR 6.0.0

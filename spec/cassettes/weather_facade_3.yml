@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=asdjfasd%3Bfasjdf%3Blak,DC&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 10 Aug 2021 21:00:05 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '3784'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Tue, 10 Aug 2021 21:00:05 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=129689D0A88E3272123644F5BE01BF8F; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"asdjfasd;fasjdf;lak,DC"},"locations":[{"street":"\u0110\u01B0\u1EDDng
+        \u0110inh C\u00F4ng Tr\u00E1ng","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bu\u00F4n
+        Ma Thu\u1ED9t","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/217542","unknownInput":"","type":"s","latLng":{"lat":12.67895,"lng":108.03563},"displayLatLng":{"lat":12.67895,"lng":108.03563}},{"street":"\u0110\u01B0\u1EDDng
+        Cao \u0110\u1EA1t","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bu\u00F4n
+        Ma Thu\u1ED9t","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"63108","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/11060","unknownInput":"","type":"s","latLng":{"lat":12.69077,"lng":108.06205},"displayLatLng":{"lat":12.69077,"lng":108.06205}},{"street":"\u0110\u01B0\u1EDDng
+        C\u1ED1ng Qu\u1EF3nh","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bu\u00F4n
+        Ma Thu\u1ED9t","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"63109","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/103323","unknownInput":"","type":"s","latLng":{"lat":12.69706,"lng":108.06135},"displayLatLng":{"lat":12.69706,"lng":108.06135}},{"street":"\u0110\u01B0\u1EDDng
+        Cao Su","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bu\u00F4n
+        Ma Thu\u1ED9t","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"63125","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/150340","unknownInput":"","type":"s","latLng":{"lat":12.70438,"lng":108.09135},"displayLatLng":{"lat":12.70438,"lng":108.09135}},{"street":"\u0110\u01B0\u1EDDng
+        Cao Th\u1EAFng","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bu\u00F4n
+        Ma Thu\u1ED9t","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"63109","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/192671","unknownInput":"","type":"s","latLng":{"lat":12.697,"lng":108.06663},"displayLatLng":{"lat":12.697,"lng":108.06663}},{"street":"\u0110\u01B0\u1EDDng
+        \u0110inh C\u00F4ng Tr\u00E1ng","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Kr\u00F4ng
+        P\u0103k","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"\u0110\u1EAFk
+        L\u1EAFk","adminArea3Type":"State","adminArea1":"VN","adminArea1Type":"Country","postalCode":"63206","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"VN/STR/p0/103730","unknownInput":"","type":"s","latLng":{"lat":12.70418,"lng":108.30525},"displayLatLng":{"lat":12.70418,"lng":108.30525}}]}]}'
+  recorded_at: Tue, 10 Aug 2021 21:00:05 GMT
+recorded_with: VCR 6.0.0

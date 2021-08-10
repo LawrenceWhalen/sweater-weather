@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=<Weather_Key>&lat=33.44&lon=-94.04&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 09 Aug 2021 15:58:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '517'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lat=33.44&lon=-94.04&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-94.04,"lat":33.44},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"base":"stations","main":{"temp":83.95,"feels_like":86.41,"temp_min":82.87,"temp_max":86.61,"pressure":1016,"humidity":56,"sea_level":1016,"grnd_level":1004},"visibility":10000,"wind":{"speed":13.42,"deg":215,"gust":18.39},"clouds":{"all":5},"dt":1628524684,"sys":{"type":2,"id":2010718,"country":"US","sunrise":1628508876,"sunset":1628557724},"timezone":-18000,"id":4133367,"name":"Texarkana","cod":200}'
+  recorded_at: Mon, 09 Aug 2021 15:58:04 GMT
+recorded_with: VCR 6.0.0
