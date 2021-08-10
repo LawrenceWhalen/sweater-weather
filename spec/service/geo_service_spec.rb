@@ -20,7 +20,7 @@ RSpec.describe GeoService do
           VCR.use_cassette 'geo_service_2' do
             actual = GeoService.get_geocoding('asdjfasd;fasjdf;lak,DC')
 
-            expect(actual).to eq({ error: 'city not found' })
+            expect(actual).to eq({ error: ['city not found'] })
           end
         end
       end

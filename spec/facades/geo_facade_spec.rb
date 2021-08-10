@@ -16,7 +16,7 @@ RSpec.describe GeoFacade do
       describe 'bad location' do
         it 'returns an error hash' do
           VCR.use_cassette 'geo facade 2' do
-            actual = GeoFacade.lat_lng("asdkljflasjf';lsdfl;s,CO")
+            actual = GeoFacade.lat_lng("asdjfasd;fasjdf;lak,DC")
 
             expect(actual.class).to eq(Hash)
             expect(actual.keys).to eq([:error])

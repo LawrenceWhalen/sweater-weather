@@ -1,9 +1,20 @@
 class Api::V1::ForecastController < ApplicationController
 
   def index
-    location_data = WeatherFacade.weather_return(params[:location])
+    check_result = location_check(params[:location])
 
-    render json: WeatherSerializer.new(location_data)
+    if check_result
+      json = check_result
+    else
+      weather_results = WeatherFacade.weather_return(params[:location])
+      if weather_results[:error]
+        json = weather_results
+      else
+        json = WeatherSerializer.new(weather_results)
+      end
+    end
+
+    render json: json
   end
   
 end

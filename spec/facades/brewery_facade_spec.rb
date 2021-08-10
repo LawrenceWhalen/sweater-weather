@@ -20,15 +20,6 @@ RSpec.describe BreweryFacade do
           end
         end
       end
-      describe 'bad location' do
-        xit 'returns an error hash' do
-          VCR.use_cassette 'brewery facade 2' do
-            actual = BreweryFacade.by_city('laksdjfasjfoi;l,co', 10)
-
-            expect(actual[:error]).to eq('city not found')
-          end
-        end
-      end
     end
   end
 end
