@@ -24,5 +24,40 @@ RSpec.describe GeoFacade do
         end
       end
     end
+
+    describe '.route_time' do
+      describe 'happy path' do
+        it 'returns the seconds the trip will take' do
+          VCR.use_cassette 'geo facade 3' do
+            actual = GeoFacade.route_time({ from: 'denver,co', to: 'san fransisco,ca' })
+
+            expect(actual[:route_time]).to eq(72433)
+            expect(actual[:error]).to eq(nil)
+          end
+        end
+      end
+      describe 'sad paths' do
+        describe 'impossible routes' do
+          it 'returns an impossible error' do
+            VCR.use_cassette 'geo facade 4' do
+              actual = GeoFacade.route_time({ from: 'denver,co', to: 'london,england' })
+
+              expect(actual[:time]).to eq(nil)
+              expect(actual[:error]).to eq([route: 'Cannot find possible route'])
+            end
+          end
+        end
+        describe 'impossible routes' do
+          it 'returns an impossible error' do
+            VCR.use_cassette 'geo facade 5' do
+              actual = GeoFacade.route_time({ from: 'denver,co', to: 'washington,dc' })
+
+              expect(actual[:time]).to eq(nil)
+              expect(actual[:error]).to eq([route: 'All possible routes are currently closed'])
+            end
+          end
+        end
+      end
+    end
   end
 end

@@ -32,7 +32,7 @@ RSpec.describe 'background requests' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("invalid location format")
+            expect(actual[:error][0][:location]).to eq("invalid location format")
           end
         end
       end
@@ -43,7 +43,7 @@ RSpec.describe 'background requests' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("invalid state code")
+            expect(actual[:error][0][:location]).to eq("invalid state code")
           end
         end
       end
@@ -54,18 +54,18 @@ RSpec.describe 'background requests' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("must include city")
+            expect(actual[:error][0][:location]).to eq("must include city")
           end
         end
       end
       describe 'no image for city' do
         xit 'returns an incorrect state error' do
           VCR.use_cassette 'background request 5' do
-            get api_v1_backgrounds_path(location: '98127398,dc')
+            get api_v1_backgrounds_path(location: 'asdjfasd;fasjdf;lak,DC')
 
             actual = JSON.parse(response.body, symbolize_names: true)
-            binding.pry
-            expect(actual[:errors][0][:location]).to eq("must include city")
+
+            expect(actual[:error][0][:location]).to eq("must include city")
           end
         end
       end

@@ -4,7 +4,7 @@ RSpec.describe 'User creation' do
   describe 'post api/v1/user' do
     describe 'happy path' do
       it 'returns a reponse with an api_key' do
-        post '/api/v1/users', params: { 
+        post api_v1_users_path, params: { 
           email: "whatever@example.com",
           password: "password",
           password_confirmation: "password"
@@ -21,7 +21,7 @@ RSpec.describe 'User creation' do
     describe 'sad path' do
       describe 'missing params' do
         it 'returns an error for missing params' do
-          post '/api/v1/users', params: { 
+          post api_v1_users_path, params: { 
             email: "",
             password: "",
             password_confirmation: ""
@@ -38,7 +38,7 @@ RSpec.describe 'User creation' do
       end
       describe 'passwords do not match' do
         it 'returns an error for password not confirmed' do
-          post '/api/v1/users', params: { 
+          post api_v1_users_path, params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password!"
@@ -53,13 +53,13 @@ RSpec.describe 'User creation' do
       end
       describe 'repeated email' do
         it 'returns email in use error' do
-          post '/api/v1/users', params: { 
+          post api_v1_users_path, params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password"
           }, as: :json
 
-          post '/api/v1/users', params: { 
+          post api_v1_users_path, params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password"

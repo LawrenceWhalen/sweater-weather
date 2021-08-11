@@ -12,11 +12,11 @@ class ApplicationController < ActionController::API
     location_state = location[-2..-1]
 
     if location[-3] != ','
-      return { errors: [location: 'invalid location format'] }
+      return { error: [location: 'invalid location format'] }
     elsif !state_array.include?(location_state.upcase)
-      return { errors: [location: 'invalid state code'] }
+      return { error: [location: 'invalid state code'] }
     elsif location[0..-4] == ''
-      return { errors: [location: 'must include city'] }
+      return { error: [location: 'must include city'] }
     end
 
     nil
@@ -42,7 +42,7 @@ class ApplicationController < ActionController::API
 
   def render_not_found_response(exception)
     render json: { 
-      error: [user: 'email or password incorrect', status: '404 Not Found'],
+      error: [exception.message, '404 Not Found'],
       message: 'Entity not found.'
        }, status: :not_found
   end

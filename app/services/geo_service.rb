@@ -17,6 +17,15 @@ class GeoService
     end
   end
 
+  def self.geo_route(locations)
+    response = conn.get('/directions/v2/route') do |conn|
+      conn.params[:from] = locations[:from]
+      conn.params[:to] = locations[:to]
+    end
+
+    parse_json(response)
+  end
+
   private
 
   def self.parse_json(response)
