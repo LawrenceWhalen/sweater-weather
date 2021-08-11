@@ -7,7 +7,7 @@ class Api::V1::ForecastController < ApplicationController
       json = check_result
     else
       weather_results = WeatherFacade.weather_return(params[:location])
-      if weather_results[:error]
+      if weather_results.class != WeatherPoro
         json = weather_results
       else
         json = WeatherSerializer.new(weather_results)

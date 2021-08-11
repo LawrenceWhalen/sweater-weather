@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?accuracy=11&api_key=<Photo_Key>&content_type=1&format=json&lat=33&lon=0&media=photos&method=flickr.photos.search&nojsoncallback=1&per_page=1&privacy_filter=1&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '228'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 01:07:42 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 01:07:42 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 f407fc9b070e259d17da832af5a7c928.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - nBbZ87AqtVqWHs38o12Pj7OhRb-7FVgJ8V9jXJqnOQrT8acXyFlcNQ==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":138,"perpage":1,"total":138,"photo":[{"id":"47130856431","owner":"27344100@N08","secret":"1cc53804b3","server":"7807","farm":8,"title":"Red
+        wine","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 01:07:42 GMT
+recorded_with: VCR 6.0.0
