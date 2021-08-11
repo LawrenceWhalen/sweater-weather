@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe 'User creation' do
   describe 'post api/v1/user' do
     describe 'happy path' do
-      xit 'returns a reponse with an api_key' do
+      it 'returns a reponse with an api_key' do
         post '/api/v1/users', params: { 
           email: "whatever@example.com",
           password: "password",
           password_confirmation: "password"
-        }.to_json, as: :json
+        }, as: :json
 
         actual = JSON.parse(response.body, symbolize_names: true)
         
@@ -20,12 +20,12 @@ RSpec.describe 'User creation' do
     end
     describe 'sad path' do
       describe 'missing params' do
-        xit 'returns an error for missing params' do
+        it 'returns an error for missing params' do
           post '/api/v1/users', params: { 
             email: "",
             password: "",
             password_confirmation: ""
-          }.to_json, as: :json
+          }, as: :json
 
           actual = JSON.parse(response.body, symbolize_names: true)
 
@@ -37,12 +37,12 @@ RSpec.describe 'User creation' do
         end
       end
       describe 'passwords do not match' do
-        xit 'returns an error for password not confirmed' do
+        it 'returns an error for password not confirmed' do
           post '/api/v1/users', params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password!"
-          }.to_json, as: :json
+          }, as: :json
 
           actual = JSON.parse(response.body, symbolize_names: true)
 
@@ -52,18 +52,18 @@ RSpec.describe 'User creation' do
         end
       end
       describe 'repeated email' do
-        xit 'returns email in use error' do
+        it 'returns email in use error' do
           post '/api/v1/users', params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password"
-          }.to_json, as: :json
+          }, as: :json
 
           post '/api/v1/users', params: { 
             email: "whatever@example.com",
             password: "password",
             password_confirmation: "password"
-          }.to_json, as: :json
+          }, as: :json
 
           actual = JSON.parse(response.body, symbolize_names: true)
           

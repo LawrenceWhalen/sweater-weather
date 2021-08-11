@@ -2,7 +2,7 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     user_params = JSON.parse(request.body.read, symbolize_names: true)
-    # user_params = JSON.parse(json_string, symbolize_names: true)
+
     user = user_strong(user_params)
     user.save!
     ApiKey.add_api_key(user)

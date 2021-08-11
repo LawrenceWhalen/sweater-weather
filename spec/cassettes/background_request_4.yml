@@ -1,0 +1,162 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=kzx,dc&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Aug 2021 15:07:25 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '5325'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 11 Aug 2021 15:07:25 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=0D5593CE8AB250319466D35458480C5B; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"kzx,dc"},"locations":[{"street":"DC
+        Drive","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Tyler","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"TX","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"75701","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p0/4358252","unknownInput":"","type":"s","latLng":{"lat":32.30041,"lng":-95.32502},"displayLatLng":{"lat":32.30041,"lng":-95.32502}},{"street":"DC
+        Drive","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Concord","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"NC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"28025","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/334665","unknownInput":"","type":"s","latLng":{"lat":35.35838,"lng":-80.55974},"displayLatLng":{"lat":35.35838,"lng":-80.55974}},{"street":"DC
+        Drive","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Eliot","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"ME","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"03903","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/6237757","unknownInput":"","type":"s","latLng":{"lat":43.16284,"lng":-70.82067},"displayLatLng":{"lat":43.16284,"lng":-70.82067}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A3XAX","geocodeQuality":"STATE","dragPoint":false,"sideOfStreet":"N","linkId":"US/GEO/p0/78654","unknownInput":"","type":"s","latLng":{"lat":38.90478,"lng":-77.01629},"displayLatLng":{"lat":38.90478,"lng":-77.01629}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bogot\u00E1","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"Distrito
+        Capital","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"CO/GEO/p0/983","unknownInput":"","type":"s","latLng":{"lat":4.60688,"lng":-74.07184},"displayLatLng":{"lat":4.60688,"lng":-74.07184}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Washington","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"US/GEO/p0/78656","unknownInput":"","type":"s","latLng":{"lat":38.89206,"lng":-77.01991},"displayLatLng":{"lat":38.89206,"lng":-77.01991}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Sirsa","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"Haryana","adminArea3Type":"State","adminArea1":"IN","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"IN/GEO/p0/154083","unknownInput":"","type":"s","latLng":{"lat":29.54431,"lng":75.05321},"displayLatLng":{"lat":29.54431,"lng":75.05321}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Kasipet","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"Telangana","adminArea3Type":"State","adminArea1":"IN","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"IN/GEO/p0/64384","unknownInput":"","type":"s","latLng":{"lat":19.02611,"lng":79.35719},"displayLatLng":{"lat":19.02611,"lng":79.35719}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Bhiwani","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"Haryana","adminArea3Type":"State","adminArea1":"IN","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"IN/GEO/p0/154462","unknownInput":"","type":"s","latLng":{"lat":28.81248,"lng":76.12079},"displayLatLng":{"lat":28.81248,"lng":76.12079}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Soure","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"Portugal
+        Continental","adminArea3Type":"State","adminArea1":"PT","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"PT/GEO/p0/13251","unknownInput":"","type":"s","latLng":{"lat":39.97145,"lng":-8.54523},"displayLatLng":{"lat":39.97145,"lng":-8.54523}}]}]}'
+  recorded_at: Wed, 11 Aug 2021 15:07:25 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?accuracy=11&api_key=<Photo_Key>&content_type=1&format=json&lat=32&lon=0&media=photos&method=flickr.photos.search&nojsoncallback=1&per_page=1&privacy_filter=1&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '216'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 15:07:26 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 15:07:25 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 c29390732f5bc4b2c7832623ae6e492f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - w3FOxcLRWSVNjk-p9_ZgINKymxIMEN4Z6lQvcdMtwtaFiySfkHkBxQ==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":5,"perpage":1,"total":5,"photo":[{"id":"14212615345","owner":"15280438@N05","secret":"8b833c709d","server":"2917","farm":3,"title":"","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 15:07:26 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?api_key=<Photo_Key>&format=json&method=flickr.profile.getProfile&nojsoncallback=1&user_id=15280438@N05
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '813'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 15:07:30 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 15:07:27 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 dcee1124728af441beff75c95d9d9d74.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - _gUQ-RYg9PbxcsLKTC08VgnOKf_aPW_5CZyTNTTzWKDYPLx6-YPjaQ==
+    body:
+      encoding: UTF-8
+      string: '{"profile":{"id":"15280438@N05","nsid":"15280438@N05","join_date":"1192667314","occupation":"Custom
+        Carpenter","hometown":"Rincon","showcase_set":"72157681193216956","showcase_set_title":"Profile
+        Showcase","first_name":"Kevin","last_name":"DelGhingaro","profile_description":"I
+        use a Iphone4 for all my pictures as well as a afew apps to edit with\n\nPretty
+        much an amatuer photographer living in the best blend of photography heaven
+        one could live in, Savannah Georgia.\n\nWithin a 20 mile radius i can be downtown
+        Savannah shooting some of the most histroic buildings in US history. 15 miles
+        away  i can be on Tybee Island along the Ocean shooting some awesome beach\/island
+        shots from my kayak.","city":"Rincon","country":"USA","facebook":"","twitter":"","tumblr":"","instagram":"","pinterest":""},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 15:07:30 GMT
+recorded_with: VCR 6.0.0
