@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       resources :breweries, only: [:index]
       resources :backgrounds, only: [:index]
+      resources :users, only: [:create, :show] do
+      end
     end
   end
 end

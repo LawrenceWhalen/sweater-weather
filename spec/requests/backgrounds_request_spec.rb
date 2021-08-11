@@ -58,6 +58,17 @@ RSpec.describe 'background requests' do
           end
         end
       end
+      describe 'no image for city' do
+        xit 'returns an incorrect state error' do
+          VCR.use_cassette 'background request 5' do
+            get api_v1_backgrounds_path(location: '98127398,dc')
+
+            actual = JSON.parse(response.body, symbolize_names: true)
+            binding.pry
+            expect(actual[:errors][0][:location]).to eq("must include city")
+          end
+        end
+      end
     end
   end
 end
