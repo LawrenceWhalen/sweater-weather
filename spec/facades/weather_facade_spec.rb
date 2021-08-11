@@ -50,6 +50,7 @@ RSpec.describe WeatherFacade do
         end
       end
     end
+
     describe '.current_brew' do
       it 'returns the summary and temp for a location' do
         VCR.use_cassette 'weather facade 2' do
@@ -58,6 +59,38 @@ RSpec.describe WeatherFacade do
           expect(actual.class).to eq(Hash)
           expect(actual[:summary].class).to eq(String)
           expect(actual[:temperature].class).to eq(String)
+        end
+      end
+    end
+
+    describe '.eta_weather' do
+      describe 'happy path' do
+        it 'returns temp and conditions for arrival time' do
+          VCR.use_cassette 'weather facade 4' do
+            actual = WeatherFacade.eta_weather('Denver, CO', 24)
+
+            expect(actual[:temperature]).to eq(84.51)
+            expect(actual[:conditions]).to eq('broken clouds')
+          end
+        end
+        it 'retuns estimated weather for longest journeys' do
+          VCR.use_cassette 'weather facade 5' do
+            actual = WeatherFacade.eta_weather('Denver, CO', 51)
+
+            expect(actual[:temperature]).to eq(92.19)
+            expect(actual[:conditions]).to eq('light rain')
+          end
+        end
+      end
+      describe 'sad path' do
+        describe 'bad coordinates' do
+          it 'returns an error message' do
+            VCR.use_cassette 'weather_facade_6' do
+              actual = WeatherFacade.eta_weather('asdjfasd;fasjdf;lak,DC', 2)
+  
+              expect(actual[:error][0][:location]).to eq('city not found')
+            end
+          end
         end
       end
     end

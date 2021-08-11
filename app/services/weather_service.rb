@@ -21,6 +21,17 @@ class WeatherService
     parse_json(response)
   end
 
+  def self.destination_weather(location_hash)
+    response = conn.get("/data/2.5/onecall") do |conn|
+      conn.params[:lat] = location_hash[:lat]
+      conn.params[:lon] = location_hash[:lng]
+      conn.params[:units] = 'imperial'
+      conn.params[:exclude] = 'alerts,minutely'
+    end
+
+    parse_json(response)
+  end
+
   private
 
   def self.parse_json(response)

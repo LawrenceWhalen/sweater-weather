@@ -25,5 +25,15 @@ RSpec.describe GeoService do
         end
       end
     end
+
+    describe '.geo_route' do
+      it 'returns a route response' do
+        VCR.use_cassette 'geo service 3' do
+          actual = GeoService.geo_route({ from: 'denver,co', to: 'san fransisco,ca' })
+
+          expect(actual[:route][:realTime]).to eq(71869)
+        end
+      end
+    end
   end
 end

@@ -28,6 +28,26 @@ class WeatherFacade
     }
   end
 
+  def self.eta_weather(location, hours)
+    location_hash = GeoFacade.lat_lng(location)
+    return location_hash if location_hash[:error]
+      
+    raw_data = WeatherService.destination_weather(location_hash)
+    if hours <= 48
+      forecast = raw_data[:hourly][hours - 1]
+      {
+        temperature: forecast[:temp],
+        conditions: forecast[:weather][0][:description]
+      }
+    else
+      forecast = raw_data[:daily][(hours/24)+2]
+      {
+        temperature: forecast[:temp][:day],
+        conditions: forecast[:weather][0][:description]
+      }
+    end
+  end
+
   private
 
   def self.current_hash(attributes)

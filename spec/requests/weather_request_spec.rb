@@ -35,7 +35,7 @@ RSpec.describe 'weather_request' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("invalid location format")
+            expect(actual[:error][0][:location]).to eq("invalid location format")
           end
         end
       end
@@ -46,7 +46,7 @@ RSpec.describe 'weather_request' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("invalid state code")
+            expect(actual[:error][0][:location]).to eq("invalid state code")
           end
         end
       end
@@ -57,7 +57,7 @@ RSpec.describe 'weather_request' do
 
             actual = JSON.parse(response.body, symbolize_names: true)
 
-            expect(actual[:errors][0][:location]).to eq("must include city")
+            expect(actual[:error][0][:location]).to eq("must include city")
           end
         end
       end

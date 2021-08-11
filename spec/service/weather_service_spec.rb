@@ -30,5 +30,18 @@ RSpec.describe WeatherService do
         end
       end
     end
+
+    describe '.destination_weather' do
+      it 'returns a hash of hourly and daily forecasts' do
+        VCR.use_cassette 'weather service 3' do
+          actual = WeatherService.destination_weather({ lat: '33.44', lng: '-94.04' })
+
+          expect(actual[:hourly].class).to eq(Array)
+          expect(actual[:hourly].length).to eq(48)
+          expect(actual[:daily].class).to eq(Array)
+          expect(actual[:daily].length).to eq(8)
+        end
+      end
+    end
   end
 end
