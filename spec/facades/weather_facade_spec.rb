@@ -45,7 +45,7 @@ RSpec.describe WeatherFacade do
           VCR.use_cassette 'weather_facade_3' do
             actual = WeatherFacade.weather_return('asdjfasd;fasjdf;lak,DC')
 
-            expect(actual[:error]).to eq(['city not found'])
+            expect(actual[:error][0][:location]).to eq('city not found')
           end
         end
       end

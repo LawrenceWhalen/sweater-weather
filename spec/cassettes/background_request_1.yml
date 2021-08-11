@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=denver,co&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Aug 2021 01:35:13 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1330'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 11 Aug 2021 01:35:13 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=0801B4620F70BBDC0EA8761F3AAE0EAF; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853}}]}]}'
+  recorded_at: Wed, 11 Aug 2021 01:35:13 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?accuracy=11&api_key=<Photo_Key>&content_type=1&format=json&lat=39&lon=0&media=photos&method=flickr.photos.search&nojsoncallback=1&per_page=1&privacy_filter=1&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '242'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 01:35:14 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 01:35:13 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 293a9175ae9a36207f1dd58def51e062.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - BqnFbQOFa-5vEAo8SR_rLjQpKbQcPhqiCAsU8tlVRQCAZAXuhAj17g==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":94,"perpage":1,"total":94,"photo":[{"id":"48539149122","owner":"94159109@N02","secret":"1d42c6a97d","server":"65535","farm":66,"title":"EMT
+        Val\u00e8ncia 8422","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 01:35:14 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?api_key=<Photo_Key>&format=json&method=flickr.profile.getProfile&nojsoncallback=1&user_id=94159109@N02
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '345'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 01:35:14 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 01:35:14 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 8aaadc90b59c6024541e9b860cab0ddd.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - IebQGNxf-A8a00aCshmtg-eTb7mjc2x0MZDAtvEIbTK-mFtSGwhlIA==
+    body:
+      encoding: UTF-8
+      string: '{"profile":{"id":"94159109@N02","nsid":"94159109@N02","join_date":"1363637453","occupation":"","hometown":"","showcase_set":"72157709701358487","showcase_set_title":"Profile
+        Showcase","first_name":"","last_name":"","profile_description":"","city":"","country":"","facebook":"","twitter":"","tumblr":"","instagram":"","pinterest":""},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 01:35:14 GMT
+recorded_with: VCR 6.0.0

@@ -13,7 +13,7 @@ class GeoService
     if response_hash[:results][0][:locations][0][:adminArea1] == 'US'
       response_hash
     else
-      { error: ['city not found'] }
+      { error: [location: 'city not found'] }
     end
   end
 

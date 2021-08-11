@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?addressmaxResults=1&key=<Geo_Key>&location=washington,dc&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 11 Aug 2021 01:05:33 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '843'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 11 Aug 2021 01:05:33 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=0F1219EFEE185A026CD63E3ADC352A32; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2021 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2021 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":false,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"washington,dc"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Washington","adminArea5Type":"City","adminArea4":"District
+        of Columbia","adminArea4Type":"County","adminArea3":"DC","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282772166","unknownInput":"","type":"s","latLng":{"lat":38.892062,"lng":-77.019912},"displayLatLng":{"lat":38.892062,"lng":-77.019912}}]}]}'
+  recorded_at: Wed, 11 Aug 2021 01:05:33 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?accuracy=11&api_key=<Photo_Key>&content_type=1&format=json&lat=38&lon=0&media=photos&method=flickr.photos.search&nojsoncallback=1&per_page=1&privacy_filter=1&sort=relevance
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '224'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 01:05:34 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 01:05:34 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 2952160d1841eaf15324662bc2354745.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - Hghw7HGWvHYn4htNEK6v77mq2wJQDe4bLp1eS1Nz8g7tIJYh3qlFVg==
+    body:
+      encoding: UTF-8
+      string: '{"photos":{"page":1,"pages":50,"perpage":1,"total":50,"photo":[{"id":"39771534244","owner":"52160317@N06","secret":"49abbff0aa","server":"4706","farm":5,"title":"FOTO
+        3","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 01:05:34 GMT
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?api_key=<Photo_Key>&format=json&method=flickr.profile.getProfile&nojsoncallback=1&user_id=52160317@N06
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '468'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 11 Aug 2021 01:05:35 GMT
+      Server:
+      - Apache/2.4.48 (Ubuntu)
+      Set-Cookie:
+      - ccc=%7B%22needsConsent%22%3Afalse%2C%22managed%22%3A0%2C%22changed%22%3A0%2C%22info%22%3A%7B%22cookieBlock%22%3A%7B%22level%22%3A0%2C%22blockRan%22%3A0%7D%7D%7D;
+        expires=Fri, 10-Sep-2021 01:05:34 GMT; Max-Age=2592000; path=/; domain=.flickr.com
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 f26542ad27191d9a36a453712d4b7c3e.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD51-C3
+      X-Amz-Cf-Id:
+      - j16r_08wFtaTXJ8QNQca5TGY8NO_21kh7YMqFcUozsDi6i5RbuJMBA==
+    body:
+      encoding: UTF-8
+      string: '{"profile":{"id":"52160317@N06","nsid":"52160317@N06","join_date":"1279352658","occupation":"","hometown":"","showcase_set":"72157677391100164","showcase_set_title":"Profile
+        Showcase","first_name":"DEE","last_name":"DIPLOMA ERMITAS DE ESPA\u00d1A","email":"diplomaermitas@yahoo.es","profile_description":"","website":"http:\/\/diplomaermitas.es","city":"TUDELA","country":"ESPA\u00d1A","facebook":"","twitter":"","tumblr":"","instagram":"","pinterest":""},"stat":"ok"}'
+  recorded_at: Wed, 11 Aug 2021 01:05:35 GMT
+recorded_with: VCR 6.0.0
