@@ -42,7 +42,7 @@ class ApplicationController < ActionController::API
 
   def render_not_found_response(exception)
     render json: { 
-      error: [exception.message, '404 Not Found'],
+      error: [user: 'email or password incorrect', status: '404 Not Found'],
       message: 'Entity not found.'
        }, status: :not_found
   end
